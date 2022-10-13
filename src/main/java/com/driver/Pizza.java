@@ -18,10 +18,10 @@ public class Pizza {
         isBillGenerated = false;
         if(isVeg){
             this.price = 300;
-            this.bill = "Base Price Of The Pizza: 300 \n";
+            this.bill = "Base Price Of The Pizza: 300\n";
         }else{
             this.price = 400;
-            this.bill = "Base Price Of The Pizza: 400 \n";
+            this.bill = "Base Price Of The Pizza: 400\n";
         }
 
     }
@@ -60,17 +60,17 @@ public class Pizza {
             isBillGenerated = true;
 
             if (extraCheese) {
-                this.bill = bill + "Extra Cheese Added: 80 \n";
+                this.bill = bill + "Extra Cheese Added: 80\n";
             }
             if (extraTopping) {
                 if (isVeg) {
-                    this.bill = this.bill + "Extra Toppings Added: 70 \n";
+                    this.bill = this.bill + "Extra Toppings Added: 70\n";
                 } else {
-                    this.bill = this.bill + "Extra Toppings Added: 120 \n";
+                    this.bill = this.bill + "Extra Toppings Added: 120\n";
                 }
             }
             if (takeaway) {
-                this.bill = this.bill + "Paperbag Added: 20 \n";
+                this.bill = this.bill + "Paperbag Added: 20\n";
             }
             this.bill = this.bill + "Total Price: " + getPrice()+"\n";
         }
