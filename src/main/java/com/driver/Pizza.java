@@ -8,14 +8,14 @@ public class Pizza {
     private boolean takeaway;
     private boolean extraCheese;
     private boolean extraTopping;
-    private boolean isBillGenerated;
+//    private boolean isBillGenerated;
+
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
-        // your code goes here
         takeaway = false;
         extraCheese = false;
         extraTopping = false;
-        isBillGenerated = false;
+//        isBillGenerated = false;
         if(isVeg){
             this.price = 300;
             this.bill = "Base Price Of The Pizza: 300 \n";
@@ -31,17 +31,13 @@ public class Pizza {
     }
 
     public void addExtraCheese(){
-        // your code goes here
         if(!extraCheese){
             extraCheese = true;
             this.price += 80;
         }
-
-
     }
 
     public void addExtraToppings() {
-        // your code goes here
         if (!extraTopping){
             extraTopping = true;
             if (isVeg) {
@@ -53,7 +49,6 @@ public class Pizza {
     }
 
     public void addTakeaway(){
-        // your code goes here
         if(!takeaway) {
             takeaway = true;
             this.price += 20;
@@ -61,24 +56,24 @@ public class Pizza {
     }
 
     public String getBill(){
-        if(!isBillGenerated) {
-            isBillGenerated = true;
+//        if(!isBillGenerated) {
+//            isBillGenerated = true;
 
             if (extraCheese) {
                 this.bill = bill + "Extra Cheese Added: 80 \n";
             }
             if (extraTopping) {
                 if (isVeg) {
-                    this.bill = bill + "Extra Toppings Added: 70 \n";
+                    this.bill = this.bill + "Extra Toppings Added: 70 \n";
                 } else {
-                    this.bill = bill + "Extra Toppings Added: 120 \n";
+                    this.bill = this.bill + "Extra Toppings Added: 120 \n";
                 }
             }
             if (takeaway) {
-                this.bill = bill + "Paperbag Added: 20 \n";
+                this.bill = this.bill + "Paperbag Added: 20 \n";
             }
-            this.bill = bill + "Total Price: " + getPrice() + "\n";
-        }
+            this.bill = this.bill + "Total Price: " + getPrice();
+//        }
         return this.bill;
     }
 }
